@@ -9,6 +9,6 @@
     ios_command:
         commands:
          - "dir flash: | exclude drwx"
-    register: ios_output 
-  - debug: msg={{ios_output}}
+#    register: ios_output 
+#  - debug: msg={{ios_output}}
  
