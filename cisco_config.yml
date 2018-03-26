@@ -11,7 +11,10 @@
 #         - "dir flash: | exclude drwx"
 #    register: ios_output 
 #  - debug: msg={{ios_output}} 
-   - name: run show version on remote devices
-     ios_command:
-      commands: show version
+   - raw: "dir flash: | exclude drwx" 
+     register: ios_output
+
+#   - name: run show version on remote devices
+#    ios_command:
+#      commands: show version
 
