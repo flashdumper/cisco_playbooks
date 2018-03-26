@@ -2,6 +2,6 @@
   tasks:
   - name: configure top level configuration
     ios_config:
-      lines: hostname {{ inventory_hostname }}
+      lines: hostname {{ ROUTER_HOSTNAME }}
 
 
