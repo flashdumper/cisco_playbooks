@@ -1,0 +1,8 @@
+[hostgroup-1]
+vcsr
+
+[hostgroup-1:vars]
+ansible_host = 172.28.20.155
+ansible_ssh_port = 22
+ansible_user = admin
+ansible_password = root123
