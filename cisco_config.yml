@@ -23,9 +23,9 @@
 
 
    - raw: |
-       "configure terminal"
-       "hostname {{ROUTER_HOSTNAME}}"
-       "do show running-config | section hostname" 
+       configure terminal
+       hostname {{ROUTER_HOSTNAME}}
+       do show running-config | section hostname
      register: ios_output
 
    - debug: msg="{{ios_output.stdout_lines}}"
