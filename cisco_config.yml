@@ -13,7 +13,7 @@
 #  - debug: msg={{ios_output}} 
 
 #   - raw: "terminal length 0" 
-   - raw: "{{SHOW_ME_THE_MONEY}}" 
+   - raw: "terminal length 0\n{{SHOW_ME_THE_MONEY}}" 
 #   - raw: "dir flash: | exclude drwx" 
      register: ios_output
 
