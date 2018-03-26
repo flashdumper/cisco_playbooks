@@ -1,4 +1,5 @@
 - hosts: all
+  gather_facts:no
   tasks:
   - name: configure top level configuration
     ios_config:
