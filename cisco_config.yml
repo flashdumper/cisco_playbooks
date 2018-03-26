@@ -1,3 +1,4 @@
+---
 #- hosts: all
 #  gather_facts: no
 #  ansible_connection: local
@@ -12,6 +13,8 @@
 #    register: ios_output 
 #  - debug: msg={{ios_output}}
  
-- ios_command:
-   commands:
-    - "dir flash: | exclude drwx"
+tasks:
+  - name: run show version on remote devices
+    ios_command:
+      commands: show version
+
