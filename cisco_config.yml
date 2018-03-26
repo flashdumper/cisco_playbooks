@@ -13,8 +13,9 @@
 #  - debug: msg={{ios_output}} 
 
 #   - raw: "terminal length 0" 
+   - raw: "{{SHOW_ME_THE_MONEY}}" 
 #   - raw: "dir flash: | exclude drwx" 
-#     register: ios_output
+     register: ios_output
 
 #   - debug: msg="{{ios_output.stdout_lines}}"
 #   - name: run show version on remote devices
@@ -22,10 +23,10 @@
 #      commands: - show version
 
 
-   - raw: |
-       configure terminal
-       hostname {{ROUTER_HOSTNAME}}
-       do show running-config | section hostname
-     register: ios_output
-
-   - debug: msg="{{ios_output.stdout_lines}}"
+#   - raw: |
+#       configure terminal
+#       hostname {{ROUTER_HOSTNAME}}
+#       do show running-config | section hostname
+#     register: ios_output
+#
+#   - debug: msg="{{ios_output.stdout_lines}}"
