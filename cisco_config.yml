@@ -1,9 +1,12 @@
 - hosts: all
-  connection: network_cli
   gather_facts: no
   tasks:
   - name: configure top level configuration
-    ios_config:
-      lines: hostname {{ ROUTER_HOSTNAME }}
-
-
+#    ios_config:
+#      lines: hostname {{ ROUTER_HOSTNAME }}
+    ios_command:
+        commands:
+         - "dir flash: | exclude drwx"
+    register: ios_output 
+  - debug: msg={{ios_output}}
+ 
