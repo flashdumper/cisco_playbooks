@@ -1,6 +1,8 @@
-- hosts: all
-  gather_facts: no
-  tasks:
+#- hosts: all
+#  gather_facts: no
+#  ansible_connection: local
+#  ansible_network_os: ios
+#  tasks:
   - name: configure top level configuration
 #    ios_config:
 #      lines: hostname {{ ROUTER_HOSTNAME }}
