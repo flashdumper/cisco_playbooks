@@ -1,9 +1,8 @@
----
-#- hosts: all
-#  gather_facts: no
+- hosts: all
+  gather_facts: no
 #  ansible_connection: local
 #  ansible_network_os: ios
-#  tasks:
+  tasks:
 #  - name: configure top level configuration
 #    ios_config:
 #      lines: hostname {{ ROUTER_HOSTNAME }}
@@ -11,10 +10,8 @@
 #        commands:
 #         - "dir flash: | exclude drwx"
 #    register: ios_output 
-#  - debug: msg={{ios_output}}
- 
-tasks:
-  - name: run show version on remote devices
-    ios_command:
+#  - debug: msg={{ios_output}} 
+   - name: run show version on remote devices
+     ios_command:
       commands: show version
 
