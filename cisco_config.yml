@@ -11,11 +11,14 @@
 #         - "dir flash: | exclude drwx"
 #    register: ios_output 
 #  - debug: msg={{ios_output}} 
+
+   - raw: "terminal length 0" 
    - raw: "dir flash: | exclude drwx" 
+
      register: ios_output
 
-   - debug: msg="{{ios_output}}"
+   - debug: msg="{{ios_output.stdout_lines}}"
 #   - name: run show version on remote devices
 #    ios_command:
-#      commands: show version
+#      commands: - show version
 
